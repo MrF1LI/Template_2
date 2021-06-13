@@ -1,0 +1,315 @@
+@media (min-width: 1920px) {
+    .first-content,
+    .promo-section,
+    .cabinet-section,
+    .registration-section {
+        background-size: 100% auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .mobHeader {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1500px) {
+    .person,
+    .msg,
+    .dots,
+    .gameBtn,
+    .main-content {
+        position: unset;
+    }
+
+    .for-msg,
+    .dots,
+    .startPlay-main img {
+        display: none;
+    }
+
+    .gameBtn {
+        margin-top: 50px;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whyUs-item {
+        margin-bottom: 40px;
+    }
+
+    .forYtLink {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ytLink {
+        margin-left: 0;
+    }
+
+    .startPlay-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .startPlay-item {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .grp-launcher,
+    .img-comp-container ul,
+    .hide {
+        display: none;
+    }
+
+    .launcher-main {
+        text-align: center;
+    }
+
+    .launcher-msg p {
+        padding-right: 0;
+    }
+
+    .platform2 {
+        padding: 0;
+        margin: 0;
+        max-width: unset;
+        justify-content: center;
+    }
+
+    .launcher-msg {
+        padding: 0;
+    }
+
+    .launcher-change {
+        text-align: center;
+        padding: 0;
+    }
+
+    .launcher-change ul {
+        list-style-type: none;
+    }
+
+    .img-comp-container {
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    .launcher-change li {
+        margin-bottom: 20px;
+    }
+
+    .voice-main,
+    .voice-content,
+    .voice-section {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .topline nav ul li {
+        margin-left: 50px;
+    }
+
+    .promo-content ul {
+        padding: 120px 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    nav,
+    .cabinetBtn {
+        display: none;
+    }
+
+    .person {
+        margin-top: -50px;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+
+    .footer-top {
+        padding: 10px 20px;
+    }
+
+    .promo-content ul {
+        padding: 120px 0;
+    }
+
+    .startPlay-item {
+        width: 70%;
+    }
+
+    .donation-main {
+        padding: 70px 0;
+    }
+
+    .cabinet-main {
+        justify-content: center;
+    }
+
+    .autorisation {
+        padding: 100px 0;
+    }
+
+    .cabinet-main img,
+    .registration-main img {
+        display: none;
+    }
+
+    .registration-main {
+        padding: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .voice-content img {
+        display: none;
+    }
+
+    .voice-main {
+        text-align: center;
+    }
+
+    .platform {
+        margin: 20px 0;
+        justify-content: center;
+        text-align: center;
+        max-width: unset;
+    }
+
+    .voiceDw {
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-top,
+    .footer-middle {
+        flex-direction: column;
+    }
+
+    .social {
+        padding: 10px;
+    }
+
+    .social ul li {
+        margin-left: 0;
+    }
+
+    .social ul li:nth-child(2) {
+        margin: 0 30px;
+    }
+
+    .footer-middle {
+        align-items: center;
+        text-align: center;
+    }
+
+    .middle-child:nth-child(2) {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    #TopUp {
+        display: none !important;
+    }
+
+    .ytLink-icon {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 750px) {
+    .ytLink {
+        transform: scale(0.8);
+    }
+
+    .startPlay-item {
+        width: 100%;
+    }
+
+    .startPlay-item {
+        margin-left: 0;
+    }
+
+    .startPlay-item:nth-child(2) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .ytLink {
+        min-height: 500px;
+    }
+
+    .ytLink img {
+        bottom: 0;
+    }
+
+    .yt-msg {
+        top: 20px;
+    }
+
+    .ytLink-icon {
+        top: 160px;
+    }
+}
+
+@media (max-width: 650px) {
+    .person {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 663px) {
+    .whyUs-items,
+    .news-main {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .first-content {
+        min-height: 800px;
+    }
+}
+
+@media (max-width: 450px) {
+    .gameBtn {
+        transform: scale(0.9);
+    }
+
+    .startPlay-item button,
+    .startPlay-item a {
+        width: 60px;
+        font-size: 25px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 430px) {
+    .img-comp-container {
+        display: none;
+    }
+
+    .startPlay-item a,
+    .startPlay-item button {
+        margin-right: 0;
+    }
+
+    .startPlay-item:nth-child(2) a {
+        margin-left: 0;
+    }
+}
