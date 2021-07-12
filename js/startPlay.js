@@ -129,4 +129,38 @@ function initComparisons() {
   
 initComparisons();
 
+// 
+
+let gtaTut = document.getElementById("gtaTut");
+let voiceTut = document.getElementById("voiceTut");
+let servTut = document.getElementById("servTut");
+
+let gtaTutModal = document.getElementById("gtaTutModal");
+let voiceTutModal = document.getElementById("voiceTutModal");
+let servTutModal = document.getElementById("servTutModal");
+
+gtaTut.onclick =  function () {
+  gtaTutModal.style.display = "block";
+}
+
+voiceTut.onclick =  function () {
+  voiceTutModal.style.display = "block";
+}
+
+servTut.onclick =  function () {
+  servTutModal.style.display = "block";
+}
+
+gtaTutModal.onclick = function() {
+  gtaTutModal.style.display = "none";
+}
+
+voiceTutModal.onclick = function() {
+  voiceTutModal.style.display = "none";
+}
+
+servTutModal.onclick = function() {
+  servTutModal.style.display = "none";
+}
+
 /* By F1LI */

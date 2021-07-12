@@ -10,36 +10,55 @@
     <title>Genuine Role Play | Official</title>
 </head>
 <body>
-    <!-- <button id="up-btn" style="display: inline;"><i class="fa fa-chevron-circle-up"></i></button> -->
+    <button id="up-btn"><i class="fa fa-chevron-circle-up"></i></button>
+    
+    <div class="langModal" id="langModal">
+        <div class="langContent">
+            <ul>
+                <li><a href="index.html"><img src="img/other/Geo.png" alt="georgian-flag"> Georgian</a></li>
+                <li><a href="pages/en/index.html"><img src="img/other/Eng.png" alt="english-flag"> English</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="promoModal" id="promoModal">
+        <div class="promoContent">
+            <!-- <iframe width="100%" height="340" src="https://www.youtube.com/embed/5cYuQRNoghk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <iframe width="100%" height="340" src="https://www.youtube.com/embed/52UyV68dFZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
     <section class="first-content">
         <header>
             <div class="mobHeader" id="mobHeader">
                 <div class="mobHeader-top">
-                    <a href="index.php"><img src="img/logos/FullLogo.png" alt="genuine-rp-logo"></a>
+                    <a href="index.html"><img src="img/logos/FullLogo.png" alt="genuine-rp-logo"></a>
                     <button class="mobHeader-hide" id="mobHeaderHide"><i class="fas fa-times"></i></button>
                     
                 </div>
                 <div class="mobNav">
                     <ul>
                         <li><a href="index.html"><i class="fas fa-home"></i> მთავარი</a></li>
-                        <li><a href="pages/news.html"><i class="far fa-newspaper"></i> სიახლე</a></li>
-                        <li><a href="pages/donation.html"><i class="fas fa-hand-holding-usd"></i> დონაცია</a></li>
-                        <li><a href="pages/cabinet.html"><i class="far fa-user-circle"></i> პირადი კაბინეტი</a></li>
+                        <li><a href="pages/ka/news.html"><i class="far fa-newspaper"></i> სიახლე</a></li>
+                        <li><a href="pages/ka/donation.html"><i class="fas fa-hand-holding-usd"></i> დონაცია</a></li>
+                        <li><a href="pages/ka/cabinet.html"><i class="far fa-user-circle"></i> პირადი კაბინეტი</a></li>
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <div class="topline">
-                    <a href="index.php"><img src="img/logos/Logo.png" alt="genuine-rp-logo"></a>
+                    <a href="index.html"><img src="img/logos/Logo.png" alt="genuine-rp-logo"></a>
                     <nav>
                         <ul>
                             <li><a class="lined" href="index.html"><i class="fas fa-home"></i> მთავარი</a></li>
-                            <li><a href="pages/news.html"><i class="far fa-newspaper"></i> სიახლე</a></li>
-                            <li><a href="pages/donation.html"><i class="fas fa-hand-holding-usd"></i> დონაცია</a></li>
+                            <li><a href="pages/ka/news.html"><i class="far fa-newspaper"></i> სიახლე</a></li>
+                            <li><a href="pages/ka/donation.html"><i class="fas fa-hand-holding-usd"></i> დონაცია</a></li>
                         </ul>
                     </nav>
                     <button class="burger-icon" id="mobHeaderShow"><i class="fas fa-stream"></i></button>
-                    <a class="cabinetBtn" href="pages/cabinet.html"><i class="far fa-user-circle"></i> პირადი კაბინეტი</a>
+                    <!-- <a class="cabinetBtn" href="pages/ka/cabinet.html"><i class="far fa-user-circle"></i> პირადი კაბინეტი</a> -->
+                    <button class="langBtn" id="langModalShow"><i class="fas fa-globe-europe"></i></button>
                 </div>
             </div>
         </header>
@@ -76,7 +95,7 @@
                         <button role="button" class="dot" onclick="currentSlide(2)"></button>
                         <button role="button" class="dot" onclick="currentSlide(3)"></button>
                     </div>
-                    <a class="gameBtn" href="pages/startPlay.html">
+                    <a class="gameBtn" href="pages/ka/startPlay.html">
                         <div class="for-img">
                             <img class="play-game" src="img/logos/Play.png" alt="play-icon">
                         </div>
@@ -125,7 +144,7 @@
         <div class="container">
             <div class="promo-content">
                 <div class="forYtLink">
-                    <button class="ytLink hidden">
+                    <button class="ytLink hidden" id="promoBtn">
                         <img src="img/persons/WithBike.png" alt="gta-person">
                         <i class="fab fa-youtube ytLink-icon"></i>
                         <div class="yt-msg">
@@ -151,9 +170,9 @@
                 <img src="img/logos/FullLogo.png" alt="genuine-rp-logo">
                 <div class="social">
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-discord"></i></a></li>
+                        <li><a href="https://www.facebook.com/groups/genuineroleplay/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC59_8RowUpiWq81818VAZlw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-discord" target="_blank"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -173,9 +192,23 @@
         </div>
     </footer>
 
+
+    <script>
+        let promoModal = document.getElementById("promoModal");
+        let promoModalShow = document.getElementById("promoBtn");
+
+        promoModal.onclick = function () {
+            promoModal.style.display = "none";
+        }
+
+        promoModalShow.onclick = function () {
+            promoModal.style.display = "block";
+        }
+    </script>
+
     <script src="js/mobHeader.js"></script>
     <script src="js/autoSlide.js"></script>
-    <!-- <script src="js/topUp.js"></script> -->
+    <script src="js/topUp.js"></script>
     <script src="js/animateWhenScroll.js"></script>
 </body>
 </html>

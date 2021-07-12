@@ -2,6 +2,7 @@
 
 /* ---------- << imports >> ---------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap');
 
 @import url(reset.css);
@@ -10,9 +11,13 @@
 
 /* ---------- << main >> ---------- */
 
+::selection {
+    background-color: #a250ab7a;
+}
+
 html {
     scroll-behavior: smooth;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -25,23 +30,26 @@ body {
     margin: 0 auto;
 }
 
-/* #up-btn {
+#up-btn {
     position: fixed;
     cursor: pointer;
     right: 30px;
     bottom: 30px;
-    background: #51547f;
+    background: transparent;
     border: 0;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 15px;
+    font-size: 30px;
     display: none;
     z-index: 1001;
+    color: white;
+    transition: 0.3s;
+    padding: 20px;
+    transition: 0.3s;
+    animation: fadeIn 0.2s ease-in;
 }
 
 #up-btn:hover {
     font-size: 35px;
-} */
+}
 
 /* ---------- << header >> ---------- */
 
@@ -81,6 +89,138 @@ body {
     text-shadow: 0 0 10px white;
 }
 
+.langBtn {
+    animation: fadeInLeft 1.5s ease-in-out;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 30px;
+    transition: 0.25s;
+}
+
+.langBtn:hover {
+    text-shadow: 0 2px 20px white;
+}
+
+/*  */
+
+.langModal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000b3;
+    z-index: 200;
+    display: none;
+}
+
+.langContent {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 250px;
+    margin-top: 300px;
+    animation: fadeInDown 0.3s ease-in-out;
+}
+
+.langContent ul li {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.langContent ul li:hover {
+    background-color: #00000029;
+}
+
+.langContent ul li a {
+    color: black;
+    width: 100%;
+}
+
+.langContent ul li a img {
+    width: 30px;
+    box-shadow: 0 0 1px black;
+    height: 20.03px;
+    margin-right: 10px;
+}
+
+/*  */
+
+.tutorials {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    position: fixed;
+    bottom: 60px;
+    left: 60px;
+    text-shadow: 0 0 30px white;
+    animation: tutorialAnim 4s infinite;
+}
+
+.tutorialModal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000b3;
+    z-index: 200;
+    display: none;
+}
+
+.tutorialContent {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 300px;
+    animation: fadeInDown 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col button {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+}
+
+.col button:hover {
+    color: purple;
+}
+
+.col span {
+    font-weight: 600;
+}
+
+@keyframes tutorialAnim {
+    0% {
+        color: rgb(183, 98, 190);
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(30deg);
+    }
+    50% {
+        color: white;
+        transform: rotateZ(-70deg);
+        transform: scale(1.20);
+    }
+    75% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        color: rgb(183, 98, 190);
+        transform: rotateZ(0deg);
+    }
+}
+
+/*  */
+
 .cabinetBtn {
     padding: 12px 30px;
     background-color: rgb(53, 51, 51);
@@ -111,6 +251,8 @@ body {
     height: 100%;
     background-color: rgb(53, 51, 51);
     z-index: 100;
+    display: none;
+    animation: fadeInRight 0.3s ease-in;
 }
 
 .mobHeader-top {
@@ -347,6 +489,31 @@ body {
     color: white;
 }
 
+/* tutorials */
+
+.gtaTutModal,
+.voiceTutModal,
+.servTutModal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000b3;
+    z-index: 200;
+    display: none;
+}
+
+.gtaTutContent,
+.voiceTutContent,
+.servTutContent {
+    background-color: #7824b0;
+    border-radius: 0 15px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 250px;
+    animation: fadeInDown 0.3s ease-in-out;
+    padding: 30px;
+}
+
 /* ---------- << promo-section >> ---------- */
 
 .promo-section {
@@ -358,6 +525,25 @@ body {
 
 .promo-content {
     padding: 70px 0;
+}
+
+.promoModal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000b3;
+    z-index: 200;
+    display: none;
+}
+
+.promoContent {
+    background-color: #7824b0;
+    border-radius: 0 15px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 250px;
+    animation: fadeInDown 0.3s ease-in-out;
+    padding: 30px;
 }
 
 .ytLink {
@@ -1053,7 +1239,7 @@ footer {
 }
 
 .social ul li a:hover {
-    opacity: 50%;
+    color: #6514a0;
 }
 
 .footer-middle {
